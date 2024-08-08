@@ -14,6 +14,11 @@ export default defineConfig({
   server: {
     "/cost_center/": "http://127.0.0.1:8000",
   },
+  build: {
+    rollupOptions: {
+      external: ['react-dom/client']
+    }
+  }
   preview: {
     open: true,
     port: 3000,
